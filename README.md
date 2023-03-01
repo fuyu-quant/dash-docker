@@ -1,5 +1,5 @@
 # dash-docker
-<img src="images/Dash.png" width="400">
+<img src="image/Dash.png" width="400">
 Dash docker
 
 ## Contents
