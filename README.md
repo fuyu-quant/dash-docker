@@ -29,6 +29,9 @@ docker network ls
 # Details of any docker network
 docker network inspect Network-name
 
+# Delete unused container data
+docker system prune
+
 # Container to container http communication
 # container name : Container name for communication destination
 # port : Open ports of the container to which you are communicating
