@@ -6,7 +6,7 @@ Dash docker
 * [Basic docker operations](#basic-docker-operations)
     * [Basic docker commands](#basic-docker-commands)
     * [How to run the Dockerfile](#how-to-run-the-dockerfile)
-* [Dockerfiles](#dockerfiles)
+* [Dash](#dash)
 
 ## Basic docker operations
 ### Basic docker commands
