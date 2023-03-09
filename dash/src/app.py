@@ -5,6 +5,20 @@ import pandas as pd
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
 
+#　表示するグラフの作成
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+
+#　アプリ部分
+import dash
+from dash import html
+from dash import dcc
+from dash import dash_table
+from dash.dependencies import Input, Output, State
+
+
+
 df = sns.load_dataset('tips')
 use_data = df[['total_bill','size','time','tip']]
 use_data = pd.get_dummies(use_data, drop_first=True)
@@ -17,9 +31,7 @@ clf = LinearRegression()
 clf.fit(X, Y)
 
 
-#　表示するグラフの作成
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
+
 
 tip_plots = make_subplots(rows = 1, cols = 3, start_cell = 'bottom-left')
 tip_plots.add_trace(go.Box(x = df['time'], y= df['tip'], name = 'time vs tip'), row = 1, col = 1)
@@ -38,12 +50,7 @@ tip_plots.update_layout(
     yaxis3_title_text='Tip ($)'
 )
 
-#　アプリ部分
-import dash
-from dash import html
-from dash import dcc
-from dash import dash_table
-from dash.dependencies import Input, Output, State
+
 
 
 app = dash.Dash()
