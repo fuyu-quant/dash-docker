@@ -13,6 +13,15 @@ Dash docker
 
 ## Dash
 
+### Dashの起動
+* コンテナ起動時に起動
+初期設定ではコンテナ起動時に立ち上がるようになっている
+```bash
+# コンテナ内部から起動
+ENTRYPOINT ["python", "src/app.py"]
+```
+
+* コマンドで起動
 ```bash
 docker-compose exec dash bash -c "python src/app.py"
 ```
