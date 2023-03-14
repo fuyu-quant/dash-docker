@@ -10,13 +10,12 @@ ENV TZ JST-9
 
 
 
-# パッケージのインストール
+# Installing packages
 COPY requirements.txt /root
 WORKDIR /root
 RUN pip install --no-cache-dir -r requirements.txt
 
-# dashの不具合のため
-#RUN pip uninstall werkzeug
-#RUN pip install werkzeug==2.0.0
+
+ENTRYPOINT ["python", "src/app.py"]
 
 
